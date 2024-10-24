@@ -2,6 +2,7 @@ vendor_name = ModelSim
 source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/ej1labfpga.vhd
 source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/Waveform.vwf
 source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/Waveform1.vwf
+source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/ej1labfpga_testbench.vhd
 source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/db/ej1labfpga.cbx.xml
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd

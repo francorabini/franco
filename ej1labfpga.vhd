@@ -9,9 +9,9 @@ Port (SW1 : in STD_LOGIC;
 end ej1labfpga;
 
 architecture Behavioral of ej1labfpga is
-	signal SIG1: std_logic;
-	signal SIG2: std_logic;
-	signal SIG3: std_logic;
+	signal SIG1: STD_LOGIC;
+	signal SIG2: STD_LOGIC;
+	signal SIG3: STD_LOGIC;
 				
 begin
 	SIG3 <= not (SW2);
