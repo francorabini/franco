@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\franc\OneDrive\FRANCO\franco\Parte B\simulation\qsim
+vrestador
+Z1 I<bM<6ij`=]13_QI]jWUDU2
+Z2 VClb`c_F>P;Z3loQ[<n9aG1
+Z3 dC:\Users\franc\OneDrive\FRANCO\franco\Parte B\simulation\qsim
+Z4 w1730485836
+Z5 8FF_D.vo
+Z6 FFF_D.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|FF_D.vo|
+Z9 o-work work -O0
+!i10b 1
+Z10 !s100 GI;^h^dcT1D01d20PDGLV1
+!s85 0
+Z11 !s108 1730485837.271000
+Z12 !s107 FF_D.vo|
+!s101 -O0
+vrestador_vlg_check_tst
+!i10b 1
+!s100 Fd:1<`M;YTQbe5gRcUkHZ1
+ISZ6ZoKzbzkG`;@1U4^@C>0
+Z13 VG?:A>mAj[J5PSKMH>aJaK1
+R3
+R4
+Z14 8FF_D.vt
+Z15 FFF_D.vt
+L0 63
+R7
+r1
+!s85 0
+31
+Z16 !s108 1730485837.328000
+Z17 !s107 FF_D.vt|
+Z18 !s90 -work|work|FF_D.vt|
+!s101 -O0
+R9
+vrestador_vlg_sample_tst
+!i10b 1
+Z19 !s100 enOCl9F4FY9RB:H<QP]M?2
+Z20 IZT176_c4f07eii`PmJ3YO3
+Z21 V>dPHkao?<0D5ffe1JNej01
+R3
+R4
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9
+vrestador_vlg_vec_tst
+!i10b 1
+!s100 55;5?MN@TN2:01mkj=fmf2
+IRPkzc3hRaM<B8ZbXB96_n0
+Z22 V>URgjUo^`HXhZZlKZAIcF0
+R3
+R4
+R14
+R15
+L0 185
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R9

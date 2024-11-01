@@ -1,0 +1,43 @@
+|restador
+in_a => FF_D:D1.D
+in_b => FF_D:D2.D
+in_borrin => FF_D:D3.D
+clk => FF_D:D1.CLOCK
+clk => FF_D:D2.CLOCK
+clk => FF_D:D3.CLOCK
+clk => FF_D:D4.CLOCK
+clk => FF_D:D5.CLOCK
+o_borrout <= FF_D:D4.Q
+o_resta <= FF_D:D5.Q
+
+
+|restador|FF_D:D1
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador|FF_D:D2
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador|FF_D:D3
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador|FF_D:D4
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|restador|FF_D:D5
+D => Q~reg0.DATAIN
+CLOCK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
