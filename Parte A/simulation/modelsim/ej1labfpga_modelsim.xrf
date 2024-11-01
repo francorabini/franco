@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/ej1labfpga.vhd
+source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/Waveform.vwf
+source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/Waveform1.vwf
+source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/ej1labfpga_testbench.vhd
+source_file = 1, C:/Users/franc/OneDrive/FRANCO/franco/db/ej1labfpga.cbx.xml
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = ej1labfpga
+instance = comp, \LED~output , LED~output, ej1labfpga, 1
+instance = comp, \SW3~input , SW3~input, ej1labfpga, 1
+instance = comp, \SW2~input , SW2~input, ej1labfpga, 1
+instance = comp, \SW1~input , SW1~input, ej1labfpga, 1
+instance = comp, \LED~0 , LED~0, ej1labfpga, 1
