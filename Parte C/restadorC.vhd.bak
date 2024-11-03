@@ -1,0 +1,15 @@
+library ieee;
+use ieee. std_logic_1164.all;
+entity restador is
+	Port (a : in STD_LOGIC;
+	b : in STD_LOGIC;
+	borrin : STD_LOGIC;
+	borrout : out STD_LOGIC;
+	resta : out STD_LOGIC);
+end restador;
+
+architecture Behavioral of restador is
+begin
+		resta <= (a xor b xor borrin);
+		borrout <= ((not a) and b) or ((not a) and borrin) or (b and borrin);  
+end Behavioral;
