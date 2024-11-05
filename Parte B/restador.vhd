@@ -3,7 +3,7 @@ use ieee. std_logic_1164.all;
 entity restador is
 	Port (in_a : in STD_LOGIC;
 	in_b : in STD_LOGIC;
-	in_borrin : STD_LOGIC;
+	in_borrin : in STD_LOGIC;
 	clk : in STD_LOGIC;
 	o_borrout : out STD_LOGIC;
 	o_resta : out STD_LOGIC);
