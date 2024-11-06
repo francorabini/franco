@@ -1,0 +1,38 @@
+|mi_circuito
+clock => fin_dato~reg0.CLK
+clock => contador_8[0].CLK
+clock => contador_8[1].CLK
+clock => contador_8[2].CLK
+clock => registro_7[0].CLK
+clock => registro_7[1].CLK
+clock => registro_7[2].CLK
+clock => registro_7[3].CLK
+clock => registro_7[4].CLK
+clock => registro_7[5].CLK
+clock => registro_7[6].CLK
+clock => contador_7[0].CLK
+clock => contador_7[1].CLK
+clock => contador_7[2].CLK
+reset => contador_8[0].ACLR
+reset => contador_8[1].ACLR
+reset => contador_8[2].ACLR
+reset => registro_7[0].ACLR
+reset => registro_7[1].ACLR
+reset => registro_7[2].ACLR
+reset => registro_7[3].ACLR
+reset => registro_7[4].ACLR
+reset => registro_7[5].ACLR
+reset => registro_7[6].ACLR
+reset => contador_7[0].ACLR
+reset => contador_7[1].ACLR
+reset => contador_7[2].ACLR
+reset => fin_dato~reg0.ENA
+SDA => registro_7[0].DATAIN
+SCL => and_output.IN0
+fin_dir <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+fin_dato <= fin_dato~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hab_dato => ~NO_FANOUT~
+hab_dir => and_output.IN1
+hab_ACK => ~NO_FANOUT~
+
+
