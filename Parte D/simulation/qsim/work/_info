@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\franc\OneDrive\FRANCO\franco\Parte D\simulation\qsim
+vEstados
+Z1 ILlf58?YfA?Kaml4DXjd6N2
+Z2 VF]@8ZWO`Zmk1O^deMZzeC1
+Z3 dC:\Users\franc\OneDrive\FRANCO\franco\Parte D\simulation\qsim
+Z4 w1730930116
+Z5 8Estados.vo
+Z6 FEstados.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@estados
+!i10b 1
+Z10 !s100 o<4QOA1M`[LPQnQIQO8R?2
+!s85 0
+Z11 !s108 1730930118.069000
+Z12 !s107 Estados.vo|
+Z13 !s90 -work|work|Estados.vo|
+!s101 -O0
+vEstados_vlg_check_tst
+!i10b 1
+!s100 hlj^Z0;zH5g:Yzl3QN0gV3
+I;3]MgL5e5=O06l8MnmeFh1
+VmzZLJ6n21dlznP<8@;X9e0
+R3
+Z14 w1730930115
+Z15 8Estados.vt
+Z16 FEstados.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z17 !s108 1730930118.216000
+Z18 !s107 Estados.vt|
+Z19 !s90 -work|work|Estados.vt|
+!s101 -O0
+R8
+n@estados_vlg_check_tst
+vEstados_vlg_sample_tst
+!i10b 1
+!s100 ]V<f]T0L?4>jPW7fTBmCG2
+I9NbzJB4^F=bVY]e6mPAHa1
+VLcRbBIi5kYXM7TimA`;lQ3
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@estados_vlg_sample_tst
+vEstados_vlg_vec_tst
+!i10b 1
+!s100 AN1:N7b3do8MTPU<`fWgV0
+I<Fd588lFeJ>QcS_bQf9Zf1
+V?3V3WkA]2l2>e8jddlW?b2
+R3
+R14
+R15
+R16
+L0 237
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@estados_vlg_vec_tst
