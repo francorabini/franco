@@ -1,0 +1,40 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\franc\OneDrive\FRANCO\franco\Parte C\simulation\modelsim
+Erestadorc
+Z1 w1730659611
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\franc\OneDrive\FRANCO\franco\Parte C\simulation\modelsim
+Z5 8C:/Users/franc/OneDrive/FRANCO/franco/Parte C/restadorC.vhd
+Z6 FC:/Users/franc/OneDrive/FRANCO/franco/Parte C/restadorC.vhd
+l0
+L4
+Vc<gTj<C9V=3f7KG?YC<6i1
+!s100 5<ZG;DPO8;P:g;CC:nX1k2
+Z7 OV;C;10.1d;51
+31
+!i10b 1
+Z8 !s108 1730921456.306000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/franc/OneDrive/FRANCO/franco/Parte C/restadorC.vhd|
+Z10 !s107 C:/Users/franc/OneDrive/FRANCO/franco/Parte C/restadorC.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Abehavioral
+R2
+R3
+DEx4 work 9 restadorc 0 22 c<gTj<C9V=3f7KG?YC<6i1
+l13
+L12
+VRQ=J0FN_4Uz]Ld8cXb3=Z3
+!s100 DQeG[Ym;@Tnz?3g3Uea^b0
+R7
+31
+!i10b 1
+R8
+R9
+R10
+R11
+R12

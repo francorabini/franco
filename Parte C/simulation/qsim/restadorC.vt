@@ -1,0 +1,1028 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/06/2024 17:02:57"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    esquematicoC
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module esquematicoC_vlg_sample_tst(
+	a1,
+	a2,
+	a3,
+	a4,
+	b1,
+	b2,
+	b3,
+	b4,
+	borrin,
+	CLK,
+	PRN,
+	sampler_tx
+);
+input  a1;
+input  a2;
+input  a3;
+input  a4;
+input  b1;
+input  b2;
+input  b3;
+input  b4;
+input  borrin;
+input  CLK;
+input  PRN;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(a1 or a2 or a3 or a4 or b1 or b2 or b3 or b4 or borrin or CLK or PRN)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module esquematicoC_vlg_check_tst (
+	borrout,
+	r1,
+	r2,
+	r3,
+	r4,
+	sampler_rx
+);
+input  borrout;
+input  r1;
+input  r2;
+input  r3;
+input  r4;
+input sampler_rx;
+
+reg  borrout_expected;
+reg  r1_expected;
+reg  r2_expected;
+reg  r3_expected;
+reg  r4_expected;
+
+reg  borrout_prev;
+reg  r1_prev;
+reg  r2_prev;
+reg  r3_prev;
+reg  r4_prev;
+
+reg  borrout_expected_prev;
+reg  r1_expected_prev;
+reg  r2_expected_prev;
+reg  r3_expected_prev;
+reg  r4_expected_prev;
+
+reg  last_borrout_exp;
+reg  last_r1_exp;
+reg  last_r2_exp;
+reg  last_r3_exp;
+reg  last_r4_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:5] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 5'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	borrout_prev = borrout;
+	r1_prev = r1;
+	r2_prev = r2;
+	r3_prev = r3;
+	r4_prev = r4;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	borrout_expected_prev = borrout_expected;
+	r1_expected_prev = r1_expected;
+	r2_expected_prev = r2_expected;
+	r3_expected_prev = r3_expected;
+	r4_expected_prev = r4_expected;
+end
+
+
+
+// expected borrout
+initial
+begin
+	borrout_expected = 1'bX;
+end 
+
+// expected r1
+initial
+begin
+	r1_expected = 1'bX;
+end 
+
+// expected r2
+initial
+begin
+	r2_expected = 1'bX;
+end 
+
+// expected r3
+initial
+begin
+	r3_expected = 1'bX;
+end 
+
+// expected r4
+initial
+begin
+	r4_expected = 1'bX;
+end 
+// generate trigger
+always @(borrout_expected or borrout or r1_expected or r1 or r2_expected or r2 or r3_expected or r3 or r4_expected or r4)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected borrout = %b | expected r1 = %b | expected r2 = %b | expected r3 = %b | expected r4 = %b | ",borrout_expected_prev,r1_expected_prev,r2_expected_prev,r3_expected_prev,r4_expected_prev);
+	$display("| real borrout = %b | real r1 = %b | real r2 = %b | real r3 = %b | real r4 = %b | ",borrout_prev,r1_prev,r2_prev,r3_prev,r4_prev);
+`endif
+	if (
+		( borrout_expected_prev !== 1'bx ) && ( borrout_prev !== borrout_expected_prev )
+		&& ((borrout_expected_prev !== last_borrout_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port borrout :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", borrout_expected_prev);
+		$display ("     Real value = %b", borrout_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_borrout_exp = borrout_expected_prev;
+	end
+	if (
+		( r1_expected_prev !== 1'bx ) && ( r1_prev !== r1_expected_prev )
+		&& ((r1_expected_prev !== last_r1_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port r1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", r1_expected_prev);
+		$display ("     Real value = %b", r1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_r1_exp = r1_expected_prev;
+	end
+	if (
+		( r2_expected_prev !== 1'bx ) && ( r2_prev !== r2_expected_prev )
+		&& ((r2_expected_prev !== last_r2_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port r2 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", r2_expected_prev);
+		$display ("     Real value = %b", r2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_r2_exp = r2_expected_prev;
+	end
+	if (
+		( r3_expected_prev !== 1'bx ) && ( r3_prev !== r3_expected_prev )
+		&& ((r3_expected_prev !== last_r3_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port r3 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", r3_expected_prev);
+		$display ("     Real value = %b", r3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_r3_exp = r3_expected_prev;
+	end
+	if (
+		( r4_expected_prev !== 1'bx ) && ( r4_prev !== r4_expected_prev )
+		&& ((r4_expected_prev !== last_r4_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port r4 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", r4_expected_prev);
+		$display ("     Real value = %b", r4_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_r4_exp = r4_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module esquematicoC_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg a1;
+reg a2;
+reg a3;
+reg a4;
+reg b1;
+reg b2;
+reg b3;
+reg b4;
+reg borrin;
+reg CLK;
+reg PRN;
+// wires                                               
+wire borrout;
+wire r1;
+wire r2;
+wire r3;
+wire r4;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+esquematicoC i1 (
+// port map - connection between master ports and signals/registers   
+	.a1(a1),
+	.a2(a2),
+	.a3(a3),
+	.a4(a4),
+	.b1(b1),
+	.b2(b2),
+	.b3(b3),
+	.b4(b4),
+	.borrin(borrin),
+	.borrout(borrout),
+	.CLK(CLK),
+	.PRN(PRN),
+	.r1(r1),
+	.r2(r2),
+	.r3(r3),
+	.r4(r4)
+);
+
+// a1
+initial
+begin
+	a1 = 1'b0;
+	a1 = #25000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #15000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #30000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #20000 1'b1;
+	a1 = #15000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #25000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #20000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #30000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #15000 1'b0;
+	a1 = #20000 1'b1;
+	a1 = #15000 1'b0;
+	a1 = #20000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #15000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #20000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #25000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #15000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #20000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #15000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #5000 1'b0;
+	a1 = #5000 1'b1;
+	a1 = #20000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #10000 1'b0;
+	a1 = #10000 1'b1;
+	a1 = #5000 1'b0;
+end 
+
+// a2
+initial
+begin
+	a2 = 1'b1;
+	a2 = #20000 1'b0;
+	a2 = #40000 1'b1;
+	a2 = #10000 1'b0;
+	a2 = #20000 1'b1;
+	a2 = #100000 1'b0;
+	a2 = #30000 1'b1;
+	a2 = #30000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #30000 1'b0;
+	a2 = #20000 1'b1;
+	a2 = #70000 1'b0;
+	a2 = #20000 1'b1;
+	a2 = #60000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #30000 1'b0;
+	a2 = #20000 1'b1;
+	a2 = #20000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #10000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #10000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #10000 1'b0;
+	a2 = #20000 1'b1;
+	a2 = #60000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #10000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #30000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #10000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #10000 1'b0;
+	a2 = #30000 1'b1;
+	a2 = #10000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #20000 1'b0;
+	a2 = #30000 1'b1;
+	a2 = #10000 1'b0;
+	a2 = #10000 1'b1;
+	a2 = #20000 1'b0;
+	a2 = #20000 1'b1;
+	a2 = #40000 1'b0;
+end 
+
+// a3
+initial
+begin
+	a3 = 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #30000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #40000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #20000 1'b1;
+	a3 = #20000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #20000 1'b0;
+	a3 = #20000 1'b1;
+	a3 = #30000 1'b0;
+	a3 = #20000 1'b1;
+	a3 = #30000 1'b0;
+	a3 = #30000 1'b1;
+	a3 = #20000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #20000 1'b1;
+	a3 = #20000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #20000 1'b1;
+	a3 = #40000 1'b0;
+	a3 = #40000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #20000 1'b0;
+	a3 = #20000 1'b1;
+	a3 = #20000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #50000 1'b1;
+	a3 = #20000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #40000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #20000 1'b0;
+	a3 = #10000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #40000 1'b1;
+	a3 = #10000 1'b0;
+	a3 = #20000 1'b1;
+	a3 = #20000 1'b0;
+	a3 = #10000 1'b1;
+end 
+
+// a4
+initial
+begin
+	a4 = 1'b0;
+	a4 = #40000 1'b1;
+	a4 = #20000 1'b0;
+	a4 = #20000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #40000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #30000 1'b1;
+	a4 = #20000 1'b0;
+	a4 = #30000 1'b1;
+	a4 = #40000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #20000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #20000 1'b0;
+	a4 = #20000 1'b1;
+	a4 = #60000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #30000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #50000 1'b0;
+	a4 = #30000 1'b1;
+	a4 = #20000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #20000 1'b1;
+	a4 = #30000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #60000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #20000 1'b0;
+	a4 = #20000 1'b1;
+	a4 = #20000 1'b0;
+	a4 = #20000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #40000 1'b1;
+	a4 = #20000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #20000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #10000 1'b1;
+	a4 = #10000 1'b0;
+	a4 = #10000 1'b1;
+end 
+
+// b1
+initial
+begin
+	b1 = 1'b0;
+	b1 = #20000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #10000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #30000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #20000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #10000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #50000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #10000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #10000 1'b1;
+	b1 = #20000 1'b0;
+	b1 = #10000 1'b1;
+	b1 = #40000 1'b0;
+	b1 = #20000 1'b1;
+	b1 = #20000 1'b0;
+	b1 = #40000 1'b1;
+	b1 = #20000 1'b0;
+	b1 = #10000 1'b1;
+	b1 = #20000 1'b0;
+	b1 = #30000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #60000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #10000 1'b1;
+	b1 = #20000 1'b0;
+	b1 = #40000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #10000 1'b1;
+	b1 = #30000 1'b0;
+	b1 = #20000 1'b1;
+	b1 = #90000 1'b0;
+	b1 = #20000 1'b1;
+	b1 = #20000 1'b0;
+	b1 = #10000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #20000 1'b1;
+	b1 = #10000 1'b0;
+	b1 = #20000 1'b1;
+	b1 = #40000 1'b0;
+	b1 = #40000 1'b1;
+end 
+
+// b2
+initial
+begin
+	b2 = 1'b0;
+	b2 = #40000 1'b1;
+	b2 = #20000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #40000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #20000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #20000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #40000 1'b1;
+	b2 = #20000 1'b0;
+	b2 = #20000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #20000 1'b1;
+	b2 = #20000 1'b0;
+	b2 = #40000 1'b1;
+	b2 = #30000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #20000 1'b0;
+	b2 = #20000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #20000 1'b1;
+	b2 = #20000 1'b0;
+	b2 = #30000 1'b1;
+	b2 = #40000 1'b0;
+	b2 = #20000 1'b1;
+	b2 = #40000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #50000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #20000 1'b1;
+	b2 = #20000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+	b2 = #30000 1'b1;
+	b2 = #30000 1'b0;
+	b2 = #10000 1'b1;
+	b2 = #10000 1'b0;
+end 
+
+// b3
+initial
+begin
+	b3 = 1'b0;
+	b3 = #30000 1'b1;
+	b3 = #20000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #30000 1'b1;
+	b3 = #20000 1'b0;
+	b3 = #20000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #30000 1'b0;
+	b3 = #20000 1'b1;
+	b3 = #20000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #20000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #20000 1'b1;
+	b3 = #30000 1'b0;
+	b3 = #20000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #20000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #30000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #30000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #30000 1'b0;
+	b3 = #20000 1'b1;
+	b3 = #30000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #30000 1'b0;
+	b3 = #20000 1'b1;
+	b3 = #30000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #20000 1'b0;
+	b3 = #20000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #30000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #20000 1'b1;
+	b3 = #20000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #20000 1'b0;
+	b3 = #10000 1'b1;
+	b3 = #10000 1'b0;
+	b3 = #10000 1'b1;
+end 
+
+// b4
+initial
+begin
+	b4 = 1'b1;
+	b4 = #50000 1'b0;
+	b4 = #20000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #20000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #30000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #20000 1'b1;
+	b4 = #20000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #60000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #20000 1'b0;
+	b4 = #30000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #20000 1'b1;
+	b4 = #20000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #20000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #20000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #80000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #30000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #20000 1'b1;
+	b4 = #20000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #10000 1'b0;
+	b4 = #30000 1'b1;
+	b4 = #20000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #50000 1'b0;
+	b4 = #10000 1'b1;
+	b4 = #20000 1'b0;
+	b4 = #30000 1'b1;
+	b4 = #40000 1'b0;
+	b4 = #60000 1'b1;
+	b4 = #10000 1'b0;
+end 
+
+// borrin
+initial
+begin
+	borrin = 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #20000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #30000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #20000 1'b0;
+	borrin = #30000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #20000 1'b0;
+	borrin = #30000 1'b1;
+	borrin = #20000 1'b0;
+	borrin = #30000 1'b1;
+	borrin = #30000 1'b0;
+	borrin = #20000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #20000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #20000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #30000 1'b0;
+	borrin = #40000 1'b1;
+	borrin = #20000 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #20000 1'b0;
+	borrin = #20000 1'b1;
+	borrin = #40000 1'b0;
+	borrin = #40000 1'b1;
+	borrin = #20000 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #20000 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #30000 1'b0;
+	borrin = #20000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #20000 1'b1;
+	borrin = #40000 1'b0;
+	borrin = #20000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #20000 1'b1;
+	borrin = #30000 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #10000 1'b0;
+	borrin = #10000 1'b1;
+	borrin = #30000 1'b0;
+end 
+
+// CLK
+initial
+begin
+	CLK = 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #35000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #45000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #30000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #20000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #30000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #25000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #20000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #20000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #55000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #10000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #15000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #15000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #10000 1'b1;
+	CLK = #5000 1'b0;
+	CLK = #5000 1'b1;
+end 
+
+// PRN
+initial
+begin
+	PRN = 1'b1;
+end 
+
+esquematicoC_vlg_sample_tst tb_sample (
+	.a1(a1),
+	.a2(a2),
+	.a3(a3),
+	.a4(a4),
+	.b1(b1),
+	.b2(b2),
+	.b3(b3),
+	.b4(b4),
+	.borrin(borrin),
+	.CLK(CLK),
+	.PRN(PRN),
+	.sampler_tx(sampler)
+);
+
+esquematicoC_vlg_check_tst tb_out(
+	.borrout(borrout),
+	.r1(r1),
+	.r2(r2),
+	.r3(r3),
+	.r4(r4),
+	.sampler_rx(sampler)
+);
+endmodule
+
