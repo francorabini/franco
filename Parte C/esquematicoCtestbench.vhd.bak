@@ -1,0 +1,115 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_unsigned.ALL;
+
+ENTITY esquematicoC_tb IS
+END esquematicoC_tb;
+
+ARCHITECTURE behavior OF esquematicoC_tb IS 
+
+    -- Señales para conectar al DUT (Device Under Test)
+    SIGNAL CLK_tb : STD_LOGIC := '0';
+    SIGNAL PRN_tb : STD_LOGIC := '1';
+    SIGNAL borrin_tb : STD_LOGIC := '0';
+    SIGNAL a1_tb : STD_LOGIC := '0';
+    SIGNAL a2_tb : STD_LOGIC := '0';
+    SIGNAL a3_tb : STD_LOGIC := '0';
+    SIGNAL a4_tb : STD_LOGIC := '0';
+    SIGNAL b1_tb : STD_LOGIC := '0';
+    SIGNAL b2_tb : STD_LOGIC := '0';
+    SIGNAL b3_tb : STD_LOGIC := '0';
+    SIGNAL b4_tb : STD_LOGIC := '0';
+    SIGNAL borrout_tb : STD_LOGIC;
+    SIGNAL r1_tb : STD_LOGIC;
+    SIGNAL r2_tb : STD_LOGIC;
+    SIGNAL r3_tb : STD_LOGIC;
+    SIGNAL r4_tb : STD_LOGIC;
+
+    -- Instancia del DUT (Device Under Test)
+    COMPONENT esquematicoC
+    PORT(
+        CLK : IN STD_LOGIC;
+        PRN : IN STD_LOGIC;
+        borrin : IN STD_LOGIC;
+        a1 : IN STD_LOGIC;
+        a2 : IN STD_LOGIC;
+        a3 : IN STD_LOGIC;
+        a4 : IN STD_LOGIC;
+        b1 : IN STD_LOGIC;
+        b2 : IN STD_LOGIC;
+        b3 : IN STD_LOGIC;
+        b4 : IN STD_LOGIC;
+        borrout : OUT STD_LOGIC;
+        r4 : OUT STD_LOGIC;
+        r3 : OUT STD_LOGIC;
+        r2 : OUT STD_LOGIC;
+        r1 : OUT STD_LOGIC
+    );
+    END COMPONENT;
+
+BEGIN
+
+    -- Instancia del circuito
+    uut: esquematicoC PORT MAP (
+        CLK => CLK_tb,
+        PRN => PRN_tb,
+        borrin => borrin_tb,
+        a1 => a1_tb,
+        a2 => a2_tb,
+        a3 => a3_tb,
+        a4 => a4_tb,
+        b1 => b1_tb,
+        b2 => b2_tb,
+        b3 => b3_tb,
+        b4 => b4_tb,
+        borrout => borrout_tb,
+        r1 => r1_tb,
+        r2 => r2_tb,
+        r3 => r3_tb,
+        r4 => r4_tb
+    );
+
+    -- Generador de reloj
+    CLK_process :process
+    begin
+        CLK_tb <= '0';
+        wait for 10 ns;
+        CLK_tb <= '1';
+        wait for 10 ns;
+    end process;
+
+    -- Simulación de señales
+    stimulus_process : process
+    begin
+        -- Inicialización de señales
+        PRN_tb <= '1';
+        borrin_tb <= '0';
+        a1_tb <= '0'; a2_tb <= '0'; a3_tb <= '0'; a4_tb <= '0';
+        b1_tb <= '0'; b2_tb <= '0'; b3_tb <= '0'; b4_tb <= '0';
+        wait for 50 ns;
+        
+        -- Aplicar Reset
+        PRN_tb <= '0';  -- Activar el reset
+        wait for 50 ns;
+        PRN_tb <= '1';  -- Desactivar el reset
+        
+        -- Aplicar estímulos a las entradas
+        a1_tb <= '1'; a2_tb <= '1'; a3_tb <= '0'; a4_tb <= '1';
+        b1_tb <= '0'; b2_tb <= '1'; b3_tb <= '1'; b4_tb <= '0';
+        borrin_tb <= '1';
+        
+        wait for 100 ns;
+
+        -- Cambiar estímulos
+        a1_tb <= '0'; a2_tb <= '1'; a3_tb <= '1'; a4_tb <= '0';
+        b1_tb <= '1'; b2_tb <= '0'; b3_tb <= '1'; b4_tb <= '1';
+        borrin_tb <= '0';
+        
+        wait for 100 ns;
+
+        -- Finalizar simulación
+        wait;
+    end process;
+
+END;
