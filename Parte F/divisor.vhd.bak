@@ -1,0 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity divisor is
+port(a: in std_logic_vector(5 downto 0); -- a esta representado en formato (4,2)
+	b: in std_logic_vector(5 to 0); -- b esta representado en formato (3,3)
+	resul: out std_logic_vector(9 downto 0) -- max. num. a representar necesita 7 bits de parte entera y decido poner 3 a la decimal
+	
+)

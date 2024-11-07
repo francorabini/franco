@@ -1,0 +1,31 @@
+|divisor
+a[0] => Div0.IN21
+a[1] => Div0.IN20
+a[2] => Div0.IN19
+a[3] => Div0.IN18
+a[4] => Div0.IN17
+a[5] => Div0.IN16
+b[0] => Div0.IN15
+b[1] => Div0.IN14
+b[2] => Div0.IN13
+b[3] => Div0.IN12
+b[4] => Div0.IN11
+b[5] => Div0.IN10
+resul[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[4] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[5] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[6] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[7] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[8] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[9] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[10] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[11] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[12] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[13] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[14] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+resul[15] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\franc\OneDrive\FRANCO\franco\Parte F\simulation\qsim
+vdivisor
+Z1 IhBXLEV7K]oJLNUZ81GGJX2
+Z2 Vo6eS^zc0LERzcUVo>MdFc2
+Z3 dC:\Users\franc\OneDrive\FRANCO\franco\Parte F\simulation\qsim
+Z4 w1731002304
+Z5 8divisor.vo
+Z6 Fdivisor.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 kidl]z?Q;Qz76^FXQffTo3
+!s85 0
+Z10 !s108 1731002306.028000
+Z11 !s107 divisor.vo|
+Z12 !s90 -work|work|divisor.vo|
+!s101 -O0
+vdivisor_vlg_check_tst
+!i10b 1
+!s100 LCZ=CEELe@M;=3`J]?b`M1
+IOg63QR]=XW2l=1?b5DiG:2
+VQMBe7S8LfT:kaP8B;6e5X2
+R3
+Z13 w1731002303
+Z14 8divisor.vt
+Z15 Fdivisor.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z16 !s108 1731002306.122000
+Z17 !s107 divisor.vt|
+Z18 !s90 -work|work|divisor.vt|
+!s101 -O0
+R8
+vdivisor_vlg_sample_tst
+!i10b 1
+!s100 e89dDKRFejJ__K<GNHmBe0
+IMU4^V459DA_mUk6T1P87f1
+VVin6K>n8<_ZTz8h=LUi`b3
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vdivisor_vlg_vec_tst
+!i10b 1
+!s100 HQP_KN<]o690WM22;nQ;L1
+IO4bA_kYzRg7_`]Z:dU_o70
+VCZ<Vz<_fdZaO30[d=3T;j2
+R3
+R13
+R14
+R15
+L0 423
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
