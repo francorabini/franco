@@ -8,7 +8,6 @@ END esquematicoCcod_tb;
 
 ARCHITECTURE behavior OF esquematicoCcod_tb IS 
 
-    -- Señales para conectar al DUT (Device Under Test)
     SIGNAL CLK_tb : STD_LOGIC := '0';
     SIGNAL PRN_tb : STD_LOGIC := '1';
     SIGNAL borrin_tb : STD_LOGIC := '0';
@@ -26,7 +25,6 @@ ARCHITECTURE behavior OF esquematicoCcod_tb IS
     SIGNAL r3_tb : STD_LOGIC;
     SIGNAL r4_tb : STD_LOGIC;
 
-    -- Instancia del DUT (Device Under Test)
     COMPONENT esquematicoCcod
     PORT(
         CLK : IN STD_LOGIC;
@@ -50,7 +48,6 @@ ARCHITECTURE behavior OF esquematicoCcod_tb IS
 
 BEGIN
 
-    -- Instancia del circuito
     uut: esquematicoCcod PORT MAP (
         CLK => CLK_tb,
         PRN => PRN_tb,
