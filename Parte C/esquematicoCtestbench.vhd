@@ -1,54 +1,55 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-USE ieee.std_logic_arith.ALL;
-USE ieee.std_logic_unsigned.ALL;
+library ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.std_logic_unsigned.ALL;
 
-ENTITY esquematicoCcod_tb IS
-END esquematicoCcod_tb;
+entity esquematicoCtestbench is
+end esquematicoCtestbench;
 
-ARCHITECTURE behavior OF esquematicoCcod_tb IS 
+architecture behavior of esquematicoCtestbench is
 
-    SIGNAL CLK_tb : STD_LOGIC := '0';
-    SIGNAL PRN_tb : STD_LOGIC := '1';
-    SIGNAL borrin_tb : STD_LOGIC := '0';
-    SIGNAL a1_tb : STD_LOGIC := '0';
-    SIGNAL a2_tb : STD_LOGIC := '0';
-    SIGNAL a3_tb : STD_LOGIC := '0';
-    SIGNAL a4_tb : STD_LOGIC := '0';
-    SIGNAL b1_tb : STD_LOGIC := '0';
-    SIGNAL b2_tb : STD_LOGIC := '0';
-    SIGNAL b3_tb : STD_LOGIC := '0';
-    SIGNAL b4_tb : STD_LOGIC := '0';
-    SIGNAL borrout_tb : STD_LOGIC;
-    SIGNAL r1_tb : STD_LOGIC;
-    SIGNAL r2_tb : STD_LOGIC;
-    SIGNAL r3_tb : STD_LOGIC;
-    SIGNAL r4_tb : STD_LOGIC;
+    signal CLK_tb : std_logic := '0';
+    signal PRN_tb : std_logic := '1';
+    signal borrin_tb : std_logic := '0';
+    signal a1_tb : std_logic := '0';
+    signal a2_tb : std_logic := '0';
+    signal a3_tb : std_logic := '0';
+    signal a4_tb : std_logic := '0';
+    signal b1_tb : std_logic := '0';
+    signal b2_tb : std_logic := '0';
+    signal b3_tb : std_logic := '0';
+    signal b4_tb : std_logic := '0';
+    signal borrout_tb : std_logic;
+    signal r1_tb : std_logic;
+    signal r2_tb : std_logic;
+    signal r3_tb : std_logic;
+    signal r4_tb : std_logic;
+	 
+	  constant clk_period : time := 10 ns;
 
-    COMPONENT esquematicoCcod
-    PORT(
-        CLK : IN STD_LOGIC;
-        PRN : IN STD_LOGIC;
-        borrin : IN STD_LOGIC;
-        a1 : IN STD_LOGIC;
-        a2 : IN STD_LOGIC;
-        a3 : IN STD_LOGIC;
-        a4 : IN STD_LOGIC;
-        b1 : IN STD_LOGIC;
-        b2 : IN STD_LOGIC;
-        b3 : IN STD_LOGIC;
-        b4 : IN STD_LOGIC;
-        borrout : OUT STD_LOGIC;
-        r4 : OUT STD_LOGIC;
-        r3 : OUT STD_LOGIC;
-        r2 : OUT STD_LOGIC;
-        r1 : OUT STD_LOGIC
-    );
-    END COMPONENT;
+    component esquematicoCcod
+        port(
+            CLK : in std_logic;
+            PRN : in std_logic;
+            borrin : in std_logic;
+            a1 : in std_logic;
+            a2 : in std_logic;
+            a3 : in std_logic;
+            a4 : in std_logic;
+            b1 : in std_logic;
+            b2 : in std_logic;
+            b3 : in std_logic;
+            b4 : in std_logic;
+            borrout : out std_logic;
+            r4 : out std_logic;
+            r3 : out std_logic;
+            r2 : out std_logic;
+            r1 : out std_logic
+        );
+    end component;
 
-BEGIN
+begin
 
-    uut: esquematicoCcod PORT MAP (
+    uut: esquematicoCcod port map (
         CLK => CLK_tb,
         PRN => PRN_tb,
         borrin => borrin_tb,
@@ -68,45 +69,49 @@ BEGIN
     );
 
     -- Generador de reloj
-    CLK_process :process
+  clk_process : process
     begin
-        CLK_tb <= '0';
-        wait for 10 ns;
-        CLK_tb <= '1';
-        wait for 10 ns;
+        while true loop
+            CLK_tb <= '0';
+            wait for clk_period / 2;
+            CLK_tb <= '1';
+            wait for clk_period / 2;
+        end loop;
     end process;
 
-    -- Simulación de señales
-    stimulus_process : process
-    begin
-        -- Inicialización de señales
-        PRN_tb <= '1';
-        borrin_tb <= '0';
-        a1_tb <= '0'; a2_tb <= '0'; a3_tb <= '0'; a4_tb <= '0';
-        b1_tb <= '0'; b2_tb <= '0'; b3_tb <= '0'; b4_tb <= '0';
-        wait for 50 ns;
-        
-        -- Aplicar Reset
-        PRN_tb <= '0';  -- Activar el reset
-        wait for 50 ns;
-        PRN_tb <= '1';  -- Desactivar el reset
-        
-        -- Aplicar estímulos a las entradas
-        a1_tb <= '1'; a2_tb <= '1'; a3_tb <= '0'; a4_tb <= '1';
-        b1_tb <= '0'; b2_tb <= '1'; b3_tb <= '1'; b4_tb <= '0';
-        borrin_tb <= '1';
-        
-        wait for 100 ns;
 
-        -- Cambiar estímulos
-        a1_tb <= '0'; a2_tb <= '1'; a3_tb <= '1'; a4_tb <= '0';
-        b1_tb <= '1'; b2_tb <= '0'; b3_tb <= '1'; b4_tb <= '1';
-        borrin_tb <= '0';
-        
-        wait for 100 ns;
+stimulus_process : process
+begin
+    -- Esperar un ciclo de reloj antes de comenzar
+    wait until rising_edge(CLK_tb);
+    
+    PRN_tb <= '1';
+    borrin_tb <= '0';
+    a1_tb <= '0'; a2_tb <= '0'; a3_tb <= '0'; a4_tb <= '0';
+    b1_tb <= '0'; b2_tb <= '0'; b3_tb <= '0'; b4_tb <= '0';
+    wait until rising_edge(CLK_tb);
 
-        -- Finalizar simulación
-        wait;
-    end process;
+    -- Aplicar Reset
+    PRN_tb <= '0';  -- Activar el reset
+    wait until rising_edge(CLK_tb);
+    PRN_tb <= '1';  -- Desactivar el reset
+    
+    -- Aplicar estímulos a las entradas
+    a1_tb <= '1'; a2_tb <= '1'; a3_tb <= '0'; a4_tb <= '1';
+    b1_tb <= '0'; b2_tb <= '1'; b3_tb <= '1'; b4_tb <= '0';
+    borrin_tb <= '1';
+    wait until rising_edge(CLK_tb);
 
-END;
+    -- Cambiar estímulos
+    a1_tb <= '0'; a2_tb <= '1'; a3_tb <= '1'; a4_tb <= '0';
+    b1_tb <= '1'; b2_tb <= '0'; b3_tb <= '1'; b4_tb <= '1';
+    borrin_tb <= '0';
+    wait until rising_edge(CLK_tb);
+
+    -- Finalizar simulación con una espera válida
+    wait until rising_edge(CLK_tb);
+end process;
+
+
+
+end behavior;

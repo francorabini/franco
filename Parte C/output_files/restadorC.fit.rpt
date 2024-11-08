@@ -1,5 +1,5 @@
 Fitter report for restadorC
-Thu Nov 07 18:27:17 2024
+Fri Nov 08 00:16:46 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -66,10 +66,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov 07 18:27:17 2024           ;
+; Fitter Status                      ; Successful - Fri Nov 08 00:16:46 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; restadorC                                       ;
-; Top-level Entity Name              ; esquematicoC                                    ;
+; Top-level Entity Name              ; esquematicoCcod                                 ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C120F780C7                                   ;
 ; Timing Models                      ; Final                                           ;
@@ -170,12 +170,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; PRN      ; Incomplete set of assignments ;
 ; a2       ; Incomplete set of assignments ;
 ; b2       ; Incomplete set of assignments ;
-; borrin   ; Incomplete set of assignments ;
 ; b1       ; Incomplete set of assignments ;
+; borrin   ; Incomplete set of assignments ;
 ; a1       ; Incomplete set of assignments ;
-; a4       ; Incomplete set of assignments ;
 ; b4       ; Incomplete set of assignments ;
 ; a3       ; Incomplete set of assignments ;
+; a4       ; Incomplete set of assignments ;
 ; b3       ; Incomplete set of assignments ;
 +----------+-------------------------------+
 
@@ -351,13 +351,13 @@ The pin-out file can be found in C:/Users/franc/OneDrive/FRANCO/franco/Parte C/o
 ; PRN    ; J1    ; 1        ; 0            ; 36           ; 7            ; 13                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; a1     ; AB5   ; 2        ; 0            ; 4            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; a2     ; AB6   ; 2        ; 0            ; 4            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; a3     ; AH3   ; 3        ; 5            ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; a4     ; AD7   ; 3        ; 3            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b1     ; AF4   ; 3        ; 1            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a3     ; AF2   ; 2        ; 0            ; 6            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a4     ; AH3   ; 3        ; 5            ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b1     ; AD5   ; 3        ; 1            ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; b2     ; AD4   ; 3        ; 1            ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 ; b3     ; AE6   ; 3        ; 1            ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b4     ; AF2   ; 2        ; 0            ; 6            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; borrin ; AD5   ; 3        ; 1            ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b4     ; AD7   ; 3        ; 3            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; borrin ; AF4   ; 3        ; 1            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -530,9 +530,9 @@ The pin-out file can be found in C:/Users/franc/OneDrive/FRANCO/franco/Parte C/o
 ; AD2      ; 97         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AD3      ; 96         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AD4      ; 130        ; 3        ; b2                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AD5      ; 128        ; 3        ; borrin                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD5      ; 128        ; 3        ; b1                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD6      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AD7      ; 134        ; 3        ; a4                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD7      ; 134        ; 3        ; b4                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD8      ; 143        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD9      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AD10     ; 149        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -583,9 +583,9 @@ The pin-out file can be found in C:/Users/franc/OneDrive/FRANCO/franco/Parte C/o
 ; AE27     ; 284        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AE28     ; 283        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AF1      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AF2      ; 123        ; 2        ; b4                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AF2      ; 123        ; 2        ; a3                                                        ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AF3      ; 138        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF4      ; 131        ; 3        ; b1                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF4      ; 131        ; 3        ; borrin                                                    ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF5      ; 136        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF6      ; 139        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF7      ; 159        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -639,7 +639,7 @@ The pin-out file can be found in C:/Users/franc/OneDrive/FRANCO/franco/Parte C/o
 ; AG27     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG28     ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AH2      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AH3      ; 137        ; 3        ; a3                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH3      ; 137        ; 3        ; a4                                                        ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AH4      ; 142        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH5      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AH6      ; 146        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1200,17 +1200,17 @@ The pin-out file can be found in C:/Users/franc/OneDrive/FRANCO/franco/Parte C/o
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                     ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name           ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------+--------------+
-; |esquematicoC              ; 15 (13)     ; 13 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 16   ; 0            ; 2 (0)        ; 8 (8)             ; 5 (0)            ; |esquematicoC                 ; work         ;
-;    |restadorC:inst1|       ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |esquematicoC|restadorC:inst1 ; work         ;
-;    |restadorC:inst2|       ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |esquematicoC|restadorC:inst2 ; work         ;
-;    |restadorC:inst3|       ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |esquematicoC|restadorC:inst3 ; work         ;
-;    |restadorC:inst|        ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |esquematicoC|restadorC:inst  ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                  ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------+--------------+
+; |esquematicoCcod           ; 15 (13)     ; 13 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 16   ; 0            ; 2 (0)        ; 8 (8)             ; 5 (0)            ; |esquematicoCcod                     ; work         ;
+;    |restadorC:b2v_inst1|   ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |esquematicoCcod|restadorC:b2v_inst1 ; work         ;
+;    |restadorC:b2v_inst2|   ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |esquematicoCcod|restadorC:b2v_inst2 ; work         ;
+;    |restadorC:b2v_inst3|   ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (2)            ; |esquematicoCcod|restadorC:b2v_inst3 ; work         ;
+;    |restadorC:b2v_inst|    ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; |esquematicoCcod|restadorC:b2v_inst  ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1228,42 +1228,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PRN     ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; a2      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; b2      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; borrin  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; b1      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; borrin  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; a1      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; a4      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; b4      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; a3      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; a3      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
+; a4      ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; b3      ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +---------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+----------------------------------------------------+
-; Pad To Core Delay Chain Fanout                     ;
-+----------------------+-------------------+---------+
-; Source Pin / Fanout  ; Pad To Core Index ; Setting ;
-+----------------------+-------------------+---------+
-; CLK                  ;                   ;         ;
-; PRN                  ;                   ;         ;
-; a2                   ;                   ;         ;
-;      - inst4~feeder  ; 0                 ; 6       ;
-; b2                   ;                   ;         ;
-;      - inst8~feeder  ; 0                 ; 6       ;
-; borrin               ;                   ;         ;
-;      - inst12~feeder ; 0                 ; 6       ;
-; b1                   ;                   ;         ;
-;      - inst7~feeder  ; 0                 ; 6       ;
-; a1                   ;                   ;         ;
-;      - inst10~feeder ; 0                 ; 6       ;
-; a4                   ;                   ;         ;
-;      - inst6~feeder  ; 0                 ; 6       ;
-; b4                   ;                   ;         ;
-;      - inst11        ; 0                 ; 6       ;
-; a3                   ;                   ;         ;
-;      - inst5~feeder  ; 0                 ; 6       ;
-; b3                   ;                   ;         ;
-;      - inst9~feeder  ; 1                 ; 6       ;
-+----------------------+-------------------+---------+
++--------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                         ;
++--------------------------+-------------------+---------+
+; Source Pin / Fanout      ; Pad To Core Index ; Setting ;
++--------------------------+-------------------+---------+
+; CLK                      ;                   ;         ;
+; PRN                      ;                   ;         ;
+; a2                       ;                   ;         ;
+;      - DFF_inst4~feeder  ; 0                 ; 6       ;
+; b2                       ;                   ;         ;
+;      - DFF_inst8~feeder  ; 0                 ; 6       ;
+; b1                       ;                   ;         ;
+;      - DFF_inst7~feeder  ; 0                 ; 6       ;
+; borrin                   ;                   ;         ;
+;      - DFF_inst12~feeder ; 0                 ; 6       ;
+; a1                       ;                   ;         ;
+;      - DFF_inst10~feeder ; 0                 ; 6       ;
+; b4                       ;                   ;         ;
+;      - DFF_inst11~feeder ; 0                 ; 6       ;
+; a3                       ;                   ;         ;
+;      - DFF_inst5~feeder  ; 1                 ; 6       ;
+; a4                       ;                   ;         ;
+;      - DFF_inst6         ; 0                 ; 6       ;
+; b3                       ;                   ;         ;
+;      - DFF_inst9~feeder  ; 1                 ; 6       ;
++--------------------------+-------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -1286,41 +1286,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------+
-; Non-Global High Fan-Out Signals     ;
-+---------------------------+---------+
-; Name                      ; Fan-Out ;
-+---------------------------+---------+
-; restadorC:inst|borrout~0  ; 3       ;
-; inst8                     ; 3       ;
-; inst4                     ; 3       ;
-; inst9                     ; 2       ;
-; inst5                     ; 2       ;
-; inst10                    ; 2       ;
-; inst7                     ; 2       ;
-; inst12                    ; 2       ;
-; b3~input                  ; 1       ;
-; a3~input                  ; 1       ;
-; b4~input                  ; 1       ;
-; a4~input                  ; 1       ;
-; a1~input                  ; 1       ;
-; b1~input                  ; 1       ;
-; borrin~input              ; 1       ;
-; b2~input                  ; 1       ;
-; a2~input                  ; 1       ;
-; restadorC:inst|resta~0    ; 1       ;
-; restadorC:inst1|resta     ; 1       ;
-; restadorC:inst2|borrout~0 ; 1       ;
-; restadorC:inst1|borrout~0 ; 1       ;
-; restadorC:inst3|resta     ; 1       ;
-; restadorC:inst3|resta~0   ; 1       ;
-; inst11                    ; 1       ;
-; inst6                     ; 1       ;
-; inst16                    ; 1       ;
-; inst15                    ; 1       ;
-; inst14                    ; 1       ;
-; inst13                    ; 1       ;
-+---------------------------+---------+
++-----------------------------------------+
+; Non-Global High Fan-Out Signals         ;
++-------------------------------+---------+
+; Name                          ; Fan-Out ;
++-------------------------------+---------+
+; restadorC:b2v_inst|borrout~0  ; 3       ;
+; DFF_inst8                     ; 3       ;
+; DFF_inst4                     ; 3       ;
+; DFF_inst9                     ; 2       ;
+; DFF_inst5                     ; 2       ;
+; DFF_inst10                    ; 2       ;
+; DFF_inst12                    ; 2       ;
+; DFF_inst7                     ; 2       ;
+; b3~input                      ; 1       ;
+; a4~input                      ; 1       ;
+; a3~input                      ; 1       ;
+; b4~input                      ; 1       ;
+; a1~input                      ; 1       ;
+; borrin~input                  ; 1       ;
+; b1~input                      ; 1       ;
+; b2~input                      ; 1       ;
+; a2~input                      ; 1       ;
+; restadorC:b2v_inst|resta~0    ; 1       ;
+; restadorC:b2v_inst1|resta     ; 1       ;
+; restadorC:b2v_inst2|borrout~0 ; 1       ;
+; restadorC:b2v_inst1|borrout~0 ; 1       ;
+; restadorC:b2v_inst3|resta     ; 1       ;
+; restadorC:b2v_inst3|resta~0   ; 1       ;
+; DFF_inst6                     ; 1       ;
+; DFF_inst11                    ; 1       ;
+; r1~reg0                       ; 1       ;
+; r2~reg0                       ; 1       ;
+; r3~reg0                       ; 1       ;
+; r4~reg0                       ; 1       ;
++-------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -1328,14 +1328,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 16 / 342,891 ( < 1 % ) ;
+; Block interconnects         ; 18 / 342,891 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 10,120 ( 0 % )     ;
-; C4 interconnects            ; 10 / 209,544 ( < 1 % ) ;
-; Direct links                ; 3 / 342,891 ( < 1 % )  ;
+; C4 interconnects            ; 9 / 209,544 ( < 1 % )  ;
+; Direct links                ; 4 / 342,891 ( < 1 % )  ;
 ; Global clocks               ; 2 / 20 ( 10 % )        ;
-; Local interconnects         ; 11 / 119,088 ( < 1 % ) ;
+; Local interconnects         ; 10 / 119,088 ( < 1 % ) ;
 ; R24 interconnects           ; 0 / 9,963 ( 0 % )      ;
-; R4 interconnects            ; 6 / 289,782 ( < 1 % )  ;
+; R4 interconnects            ; 7 / 289,782 ( < 1 % )  ;
 +-----------------------------+------------------------+
 
 
@@ -1513,12 +1513,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PRN                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; a2                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; b2                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; borrin             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; b1                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; borrin             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; a1                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; a4                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; b4                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; a3                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; a4                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; b3                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -1595,12 +1595,12 @@ Critical Warning (169085): No exact pin location assignment(s) for 16 pins of 16
     Info (169086): Pin PRN not assigned to an exact location on the device
     Info (169086): Pin a2 not assigned to an exact location on the device
     Info (169086): Pin b2 not assigned to an exact location on the device
-    Info (169086): Pin borrin not assigned to an exact location on the device
     Info (169086): Pin b1 not assigned to an exact location on the device
+    Info (169086): Pin borrin not assigned to an exact location on the device
     Info (169086): Pin a1 not assigned to an exact location on the device
-    Info (169086): Pin a4 not assigned to an exact location on the device
     Info (169086): Pin b4 not assigned to an exact location on the device
     Info (169086): Pin a3 not assigned to an exact location on the device
+    Info (169086): Pin a4 not assigned to an exact location on the device
     Info (169086): Pin b3 not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'restadorC.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
@@ -1627,30 +1627,30 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  57 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:04
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y0 to location X10_Y11
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/franc/OneDrive/FRANCO/franco/Parte C/output_files/restadorC.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5055 megabytes
-    Info: Processing ended: Thu Nov 07 18:27:17 2024
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 5051 megabytes
+    Info: Processing ended: Fri Nov 08 00:16:47 2024
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +----------------------------+

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for restadorC
-Thu Nov 07 18:26:47 2024
+Fri Nov 08 00:16:31 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,8 +14,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "restadorC:b2v_inst3"
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -41,10 +42,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 07 18:26:47 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 08 00:16:31 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; restadorC                                       ;
-; Top-level Entity Name              ; esquematicoC                                    ;
+; Top-level Entity Name              ; esquematicoCcod                                 ;
 ; Family                             ; Cyclone III                                     ;
 ; Total logic elements               ; 16                                              ;
 ;     Total combinational functions  ; 7                                               ;
@@ -64,7 +65,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C120F780C7      ;                    ;
-; Top-level entity name                                                      ; esquematicoC       ; restadorC          ;
+; Top-level entity name                                                      ; esquematicoCcod    ; restadorC          ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,14 +157,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------+---------+
-; esquematicoC.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/franc/OneDrive/FRANCO/franco/Parte C/esquematicoC.bdf ;         ;
-; restadorC.vhd                    ; yes             ; User VHDL File                     ; C:/Users/franc/OneDrive/FRANCO/franco/Parte C/restadorC.vhd    ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; restadorC.vhd                    ; yes             ; User VHDL File  ; C:/Users/franc/OneDrive/FRANCO/franco/Parte C/restadorC.vhd       ;         ;
+; esquematicoCcod.vhd              ; yes             ; User VHDL File  ; C:/Users/franc/OneDrive/FRANCO/franco/Parte C/esquematicoCcod.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -196,17 +197,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; |esquematicoC              ; 7 (0)             ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |esquematicoC                 ; work         ;
-;    |restadorC:inst1|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |esquematicoC|restadorC:inst1 ; work         ;
-;    |restadorC:inst2|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |esquematicoC|restadorC:inst2 ; work         ;
-;    |restadorC:inst3|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |esquematicoC|restadorC:inst3 ; work         ;
-;    |restadorC:inst|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |esquematicoC|restadorC:inst  ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
+; |esquematicoCcod           ; 7 (0)             ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |esquematicoCcod                     ; work         ;
+;    |restadorC:b2v_inst1|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |esquematicoCcod|restadorC:b2v_inst1 ; work         ;
+;    |restadorC:b2v_inst2|   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |esquematicoCcod|restadorC:b2v_inst2 ; work         ;
+;    |restadorC:b2v_inst3|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |esquematicoCcod|restadorC:b2v_inst3 ; work         ;
+;    |restadorC:b2v_inst|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |esquematicoCcod|restadorC:b2v_inst  ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -225,6 +226,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "restadorC:b2v_inst3"                                                                   ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; borrout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -240,7 +250,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Nov 07 18:26:44 2024
+    Info: Processing started: Fri Nov 08 00:16:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off restadorC -c restadorC
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file esquematicoc.bdf
@@ -249,15 +259,28 @@ Info (12021): Found 2 design units, including 1 entities, in source file restado
     Info (12022): Found design unit 1: restadorC-Behavioral
     Info (12023): Found entity 1: restadorC
 Info (12021): Found 2 design units, including 1 entities, in source file esquematicoctestbench.vhd
-    Info (12022): Found design unit 1: esquematicoCcod_tb-behavior
-    Info (12023): Found entity 1: esquematicoCcod_tb
+    Info (12022): Found design unit 1: esquematicoCtestbench-behavior
+    Info (12023): Found entity 1: esquematicoCtestbench
 Info (12021): Found 2 design units, including 1 entities, in source file esquematicoccod.vhd
     Info (12022): Found design unit 1: esquematicoCcod-bdf_type
     Info (12023): Found entity 1: esquematicoCcod
-Info (12127): Elaborating entity "esquematicoC" for the top level hierarchy
-Warning (275043): Pin "borrout" is missing source
-Warning (275008): Primitive "DFF" of instance "inst17" not used
-Info (12128): Elaborating entity "restadorC" for hierarchy "restadorC:inst3"
+Info (12127): Elaborating entity "esquematicoCcod" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at esquematicoCcod.vhd(38): used implicit default value for signal "borrout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at esquematicoCcod.vhd(67): object "SYNTHESIZED_WIRE_5" assigned a value but never read
+Warning (10812): VHDL warning at esquematicoCcod.vhd(96): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(108): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(120): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(132): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(144): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(156): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(168): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(197): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(209): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(221): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(233): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(245): sensitivity list already contains PRN
+Warning (10812): VHDL warning at esquematicoCcod.vhd(257): sensitivity list already contains PRN
+Info (12128): Elaborating entity "restadorC" for hierarchy "restadorC:b2v_inst"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "borrout" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
@@ -267,10 +290,10 @@ Info (21057): Implemented 32 device resources after synthesis - the final resour
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 16 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
     Info: Peak virtual memory: 4633 megabytes
-    Info: Processing ended: Thu Nov 07 18:26:47 2024
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Fri Nov 08 00:16:31 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
